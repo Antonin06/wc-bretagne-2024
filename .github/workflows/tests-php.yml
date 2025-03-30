@@ -68,6 +68,9 @@ jobs:
       - name: Launch environment
         run: WP_ENV_PHP_VERSION=${{ matrix.php_version }} WP_ENV_CORE=WordPress/WordPress#${{ matrix.core }} npm run env:start-ci
 
+      - name: Bash
+        run: npm run env run tests-wordpress bash && ls -lah
+
       - name: Updates dependencies for tests
         run: npm run env run tests-wordpress composer update -- -W --working-dir=/var/www/html/wp-content/plugins/wc-bretagne-2024/
 
