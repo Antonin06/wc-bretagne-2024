@@ -9,6 +9,13 @@ require_once dirname( __DIR__ ) . '/vendor/autoload.php';
 
 $_tests_dir = getenv( 'WP_TESTS_DIR' );
 
+// Debug des variables
+echo "\n🧪 Debug ENV variables:\n";
+echo 'WP_TESTS_DIR: ' . getenv( 'WP_TESTS_DIR' ) . PHP_EOL;
+echo 'WP_ENV_TESTS_DIR: ' . getenv( 'WP_ENV_TESTS_DIR' ) . PHP_EOL;
+echo 'sys_get_temp_dir(): ' . sys_get_temp_dir() . PHP_EOL;
+echo 'Current dir: ' . __DIR__ . PHP_EOL;
+
 define( 'TEST_DIR', __DIR__ );
 define( 'PHPUNIT_RUNNER', true );
 
