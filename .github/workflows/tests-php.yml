@@ -71,6 +71,9 @@ jobs:
       - name: Bash
         run: npm run env run tests-wordpress bash && ls -lah && cd / && ls -lah && cd tmp/ && ls -lah
 
+      - name: Get Wordpress Version
+        run: npm run env:cli wp core version
+
       - name: Updates dependencies for tests
         run: npm run env run tests-wordpress composer update -- -W --working-dir=/var/www/html/wp-content/plugins/wc-bretagne-2024/
 
